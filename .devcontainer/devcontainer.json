@@ -1,0 +1,54 @@
+{
+  "name": "Heyris - Container",
+  "image": "mcr.microsoft.com/devcontainers/universal:4.0.1-linux",
+  "features": {
+    "ghcr.io/itsmechlark/features/postgresql:1": {}
+  },
+  "postCreateCommand": "npm install -g pnpm",
+  "forwardPorts": [3000,3001,3002,3003,3004,3005,3006],
+  "portsAttributes": {
+    "3000": {
+      "label": "HeyRis API Server",
+      "onAutoForward": "notify"
+    },
+    "3001": {
+      "label": "HeyRis Web Server",
+      "onAutoForward": "notify"
+    },
+    "3002": {
+      "label": "HeyJSON Web Server",
+      "onAutoForward": "notify"
+    },
+    "3003": {
+      "label": "HeyDiff Web Server",
+      "onAutoForward": "notify"
+    },
+    "3004": {
+      "label": "HeyUI Web Server",
+      "onAutoForward": "notify"
+    },
+    "3005": {
+      "label": "HeyPartner Web Server",
+      "onAutoForward": "notify"
+    },
+    "3006": {
+      "label": "HeyTag Web Server",
+      "onAutoForward": "notify"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "typescript.tsdk": "node_modules/typescript/lib"
+      },
+      "extensions": [
+        "usernamehw.errorlens",
+        "formulahendry.auto-rename-tag",
+        "formulahendry.auto-close-tag",
+        "bradlc.vscode-tailwindcss",
+        "mhutchie.git-graph",
+        "eamodio.gitlens"
+      ]
+    }
+  }
+}
