@@ -40,6 +40,21 @@
         "typescript.tsdk": "node_modules/typescript/lib",
         "files.associations": {
           "wrangler.json": "jsonc"
+        },
+        "tailwindCSS.experimental.classRegex": [
+          ["([\"'`][^\"'`]*.*?[\"'`])", "[\"'`]([^\"'`]*).*?[\"'`]"]
+        ],
+        "tailwindCSS.classFunctions": [
+          "cva",
+          "tv",
+          "tw",
+          "clsx",
+          "tw\\.[a-z-]+"
+        ],
+        "tailwindCSS.experimental.configFile": {
+          "apps/heyris/src/app/globals.css": "apps/heyris/src/**",
+          "packages/design-system/src/styles.css": "packages/design-system/src/**",
+          "packages/themes/src/styles.css": "packages/themes/src/**"
         }
       },
       "extensions": [

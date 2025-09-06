@@ -27,6 +27,26 @@
           "src/pages/**/*.{js,jsx,ts,tsx}"
         ]
       }
+    },
+    "packages/design-system": {
+      "entry": ["src/components/*.tsx"],
+      "ignoreDependencies": ["globals"],
+      "vite": {
+        "config": ["vite.config.{js,mjs,ts,cjs,mts,cts}"]
+      },
+      "typescript": {
+        "config": ["tsconfig.json"]
+      }
+    },
+    "packages/themes": {
+      "entry": ["src/components/*.ts"],
+      "ignoreDependencies": ["tw-animate-css"],
+      "vite": {
+        "config": ["vite.config.{js,mjs,ts,cjs,mts,cts}"]
+      },
+      "typescript": {
+        "config": ["tsconfig.json"]
+      }
     }
   }
 }

@@ -1,0 +1,37 @@
+{
+  "name": "@heyris/themes",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./button": {
+      "import": "./dist/button.js",
+      "types": "./dist/button.d.ts"
+    },
+    "./style": {
+      "default": "./dist/index.css"
+    }
+  },
+  "scripts": {
+    "dev": "tsc -b && vite build --watch",
+    "build": "tsc -b && vite build",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.13",
+    "@types/node": "catalog:",
+    "tailwindcss": "^4.1.13",
+    "tw-animate-css": "^1.3.8",
+    "typescript": "catalog:",
+    "vite": "^7.1.2",
+    "vite-plugin-dts": "^4.5.4"
+  },
+  "dependencies": {
+    "tailwind-merge": "^3.3.1",
+    "tailwind-variants": "^3.1.0"
+  }
+}
